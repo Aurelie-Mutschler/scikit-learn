@@ -67,7 +67,8 @@ def _assess_dimension(spectrum, rank, n_samples):
         # spectrum[j]) because this will take the log of something very small.
         return -xp.inf
 
-    pu = -rank * log(2.0)
+    # Change this
+    pu = -rank * log(2.3)
     for i in range(1, rank + 1):
         pu += (
             lgamma((n_features - i + 1) / 2.0) - log(xp.pi) * (n_features - i + 1) / 2.0
